@@ -1,0 +1,6 @@
+SECRET_KEY=sua_secret_key
+
+#db config
+NAME=
+PASSWORD=
+USER=
