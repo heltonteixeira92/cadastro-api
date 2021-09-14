@@ -20,9 +20,17 @@ class ClientList(APIView):
 
 class ClientDetail(APIView):
     def get(self, request, pk):
-        cliente = CadastroCli.objects.get(pk=pk)
-        seralizer = CadastroSerializer(cliente, many=False)
-        return Response(seralizer.data)
+        try:
+            cliente = CadastroCli.objects.get(pk=pk)
+            seralizer = CadastroSerializer(cliente, many=False)
+            return Response(seralizer.data)
+        except CadastroCli.DoesNotExist:
+            return Response(
+                data={
+                    "message": "client with this id does not exist, try again."
+                },
+                status=status.HTTP_404_NOT_FOUND
+            )
 
 
 class ClientCreate(APIView):
@@ -46,6 +54,9 @@ class ClientUpdate(APIView):
 
 class ClientDelete(APIView):
     def delete(self, request, pk):
-        cliente = CadastroCli.objects.get(pk=pk)
-        cliente.delete()
-        return Response(status=status.HTTP_204_NO_CONTENT)
+        try:
+            cliente = CadastroCli.objects.get(pk=pk)
+            cliente.delete()
+            return Response(status=status.HTTP_204_NO_CONTENT)
+        except CadastroCli.DoesNotExist:
+            raise NotFound()
