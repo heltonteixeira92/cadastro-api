@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     # 3rd apps
     'rest_framework',
     'corsheaders',
+    'drf_yasg',
     # local apps
     'api_project.cadastro',
 

@@ -28,8 +28,8 @@
 
 - localhost:8000/clientes/create
 
-- localhost:8000/clientes/update/<id>
+- localhost:8000/clientes/update/id
 
-- localhost:8000/clientes/detail/<id>
+- localhost:8000/clientes/detail/id
 
-- localhost:8000/clientes/delete/<id>
+- localhost:8000/clientes/delete/id
