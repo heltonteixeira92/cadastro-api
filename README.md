@@ -23,13 +23,5 @@
 ``python manage.py runserver``
 
 ## Endpoints
-
-- localhost:8000/clientes
-
-- localhost:8000/clientes/create
-
-- localhost:8000/clientes/update/<id>
-
-- localhost:8000/clientes/detail/<id>
-
-- localhost:8000/clientes/delete/<id>
+- 127.0.0.1:8000/swagger/
+![img.png](img.png)
