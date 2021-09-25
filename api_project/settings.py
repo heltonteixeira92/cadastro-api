@@ -91,14 +91,14 @@ WSGI_APPLICATION = 'api_project.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
+# DATABASES = {
+#     'default': {
+#     'ENGINE': 'django.db.backends.mysql',
+#     'OPTIONS': {
+#         'read_default_file': '/etc/mysql/my.cnf',
+#     },
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.mysql',
-    #     'OPTIONS': {
-    #         'read_default_file': '/etc/mysql/my.cnf',
-    #     },
-
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': config('NAME'),
